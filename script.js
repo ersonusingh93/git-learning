@@ -129,3 +129,116 @@
 
 // const obj = new Employee("Divyesh",25,18000);
 // obj.displayDetails();
+
+
+//Inheritance in JavaScript : 
+
+//class, Object , constructor
+
+//inheritance - single level - Parent class(Super class) -> Child class(sub class)
+// class Animal{
+//     constructor()
+//     {
+//         console.log("This is parent Constructor: ");
+//     }
+// }
+
+// class Dog extends Animal{
+//     display()
+//     {
+//         console.log("This is child class ");
+//     }
+
+// }
+
+// const obj =  new Dog();
+// obj.display();
+
+// class Animal{
+//     sound()
+//     {
+//         console.log("Every Animal has different sound");
+//     }
+//     sleep()
+//     {
+//         console.log("Every Animal Sleeps");
+//     }
+
+// }
+// class Dog extends Animal{
+//     speak()
+//     {
+//         console.log("Dog Barks");
+//     }
+//     eat()
+//     {
+//         console.log("Dog is eating");
+//     }
+
+
+// }
+// class PetDog extends Dog{
+//     play()
+//     {
+//         console.log("Pet Dogs are playing");
+//     }
+
+// }
+
+// const obj =  new PetDog();
+// obj.eat();
+// obj.sleep();
+// obj.play();
+// obj.sound();
+
+
+// class Shape{
+//     constructor()
+//     {
+//         console.log("This is parent clas constructor");
+//     }
+//     display()
+//     {
+//         console.log("This is parent class");
+//     }
+
+// }
+// class Rectangle extends Shape{
+//     constructor()
+//     {
+//         super(this.display());
+//     }
+//     display()
+//     {
+        
+//         console.log("This is Child class");
+//     }
+
+// }
+
+// const obj = new Rectangle();
+// obj.display();
+
+
+class Shape{
+    constructor(name)
+    {
+        this.name = name;
+        console.log(name);
+    }
+}
+class Rectangle extends Shape{
+    constructor(name, index)
+    {
+        super(name);
+        this.index = index;
+    }
+    display()
+    {
+        console.log(`Welcome ${this.name} your index is ${this.index}`);
+    }
+}
+
+const obj = new Rectangle("Ram",1);
+obj.display();
+// const ob =  new Shape();
